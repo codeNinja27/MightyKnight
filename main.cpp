@@ -154,8 +154,11 @@ int main()
         cout << endl;
 
         int startRow, startCol;
-        cout << "Enter initial knight position: ";
-        cin >> startRow >> startCol;
+        do{
+            cout << "Please enter initial knight position that is greater than (0,0): ";
+            cin >> startRow >> startCol;           
+        } while (startCol <= 0 || startRow <= 0);
+
         cout << endl;
         --startRow; 
         --startCol; 
@@ -171,6 +174,7 @@ int main()
         else
         {
             cout << "No solution found" << endl;
+            cout << endl;
         }
         cout << endl;
         cout << "Another try? (y/n): ";
